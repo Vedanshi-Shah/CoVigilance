@@ -45,6 +45,13 @@
 <img alt="SkL" src="https://img.shields.io/badge/react-61DAFB?style=for-the-badge&logo=react&logoColor=black"/>
 
 <img alt="SkL" src="https://img.shields.io/badge/node.js-339933?style=for-the-badge&logo=node.js&logoColor=white"/>
+ 
+<img alt="SkL" src="https://img.shields.io/badge/python-DB6B97?style=for-the-badge&logo=python&logoColor=white"/>
+
+<img alt="SkL" src="https://img.shields.io/badge/firebase-FFBD35?style=for-the-badge&logo=firebase&logoColor=white"/>
+ 
+
+ 
 
 </p>
 
