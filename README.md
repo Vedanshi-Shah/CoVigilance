@@ -85,7 +85,7 @@ On our mobile app we prove notifications for the people about the place they hav
 
 #### Mobile App 
 1. Set up your expo environment.
-   <img src="static/carbon (1).png" alt="Logo" width="300" height="300"></a>
+   <img src="static/carbon (1).png" alt="code1"></a>
  
 ## Product Screenshots
 
