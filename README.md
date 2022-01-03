@@ -90,7 +90,7 @@ Mask Detection<br/><br/>
 ![Mask detection](https://github.com/Vedanshi-Shah/CoVigilance/blob/main/static/ML%20model.jpeg) <br/><br/>
 # Web-app
 Analytics Page<br/><br/>
-![Analytics Page](https://github.com/Vedanshi-Shah/CoVigilance/blob/main/static/FAQ.jpeg) <br/><br/>
+![Analytics Page](https://github.com/Vedanshi-Shah/CoVigilance/blob/main/static/web-page.png) <br/><br/>
 # Mobile-app
 Main Page<br/><br/>
 ![Main Page](https://github.com/Vedanshi-Shah/CoVigilance/blob/main/static/Main%20page.jpeg) <br/><br/>
