@@ -2,7 +2,7 @@
 <br/>
 <p align="center">
   <a href="https://github.com/radioactive11/AQUA">
-    <img src="CoVigilence.png" alt="Logo" width="420" height="420">
+    <img src="static/CoVigilence.png" alt="Logo" width="420" height="420">
 
     
   </a>
