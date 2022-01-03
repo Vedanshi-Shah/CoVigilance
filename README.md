@@ -63,6 +63,8 @@ On our mobile app we prove notifications for the people about the place they hav
  
 <img alt="SkL" src="https://img.shields.io/badge/react_native-CFFFDC?style=for-the-badge&logo=react&logoColor=black"/>
  
+<img alt="SkL" src="https://img.shields.io/badge/tensorflow-678983?style=for-the-badge&logo=tensorflow&logoColor=white"/>
+
 </p>
 
 ## Getting Started
