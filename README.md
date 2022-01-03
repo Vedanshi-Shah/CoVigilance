@@ -1,4 +1,4 @@
-[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com) [![forthebadge](https://forthebadge.com/images/badges/check-it-out.svg)](https://forthebadge.com) <p><img src='//example.com/foo.svg'></p
+[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com) [![forthebadge](https://forthebadge.com/images/badges/check-it-out.svg)](https://forthebadge.com) <p><img src='//example.com/foo.svg'></p>
 # CoVigilance
 A Solution to ensure **Crowd Management** with **Contactless** and **Safe** systems.
 ## IMP
