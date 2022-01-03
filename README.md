@@ -1,11 +1,69 @@
-# CoVigilance
-A Solution to ensure **Crowd Management** with **Contactless** and **Safe** systems.
-## IMP
 
-yolo3.weights file is too large to upload on GitHub.
-A drive link of the same is provided below:
-  https://drive.google.com/file/d/1y8RPfw3fANEZsHtjsI7J-WG-cUm2adeb/view?usp=sharing
+ [![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com) [![forthebadge](https://forthebadge.com/images/badges/check-it-out.svg)](https://forthebadge.com) [![forthebadge](https://forthebadge.com/images/badges/made-with-python.svg)](https://forthebadge.com) [![forthebadge](https://forthebadge.com/images/badges/powered-by-coffee.svg)](https://forthebadge.com)
+<br/>
+
+<p align="center">
+  <a href="https://github.com/radioactive11/AQUA">
+    <img src="static/CoVigilence.png" alt="Logo" width="420" height="420"></a>
   
+  <p align="center">
+    A<strong> solution </strong>to ensure <strong>Crowd Management</strong> with<strong> Contactless</strong> and <strong>Safe Systems</strong>.
+    <br />
+    <a href="https://youtu.be/_c6WhlrnhAM">View Demo</a>
+   
+  </p>
+</p>
+<hr />
+
+
+## Table of Contents
+
+* [About the Project](#about-the-project)
+  * [Real Time Analysis](#real-time-analysis)
+  * [Notifications](#notifications)
+  * [Safe Systems](#safe-systems)
+  * [Built With](#built-with)
+* [Getting Started](#getting-started)
+  * [Installation](#installation)
+* [Product Screenshots](#Product-Screenshots)
+* [Team Members](#team)
+* [Contact](#contact)
+
+## About the Project
+
+### Real Time Analysis
+
+### Notifications 
+
+### Safe Systems
+
+### Built With 
+<p float = "left">
+
+<img alt="SkL" src="https://img.shields.io/badge/SciKit%20Learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white"/>
+
+<img alt="SkL" src="https://img.shields.io/badge/react-61DAFB?style=for-the-badge&logo=react&logoColor=black"/>
+
+<img alt="SkL" src="https://img.shields.io/badge/node.js-339933?style=for-the-badge&logo=node.js&logoColor=white"/>
+ 
+<img alt="SkL" src="https://img.shields.io/badge/python-DB6B97?style=for-the-badge&logo=python&logoColor=white"/>
+
+<img alt="SkL" src="https://img.shields.io/badge/firebase-FFBD35?style=for-the-badge&logo=firebase&logoColor=white"/>
+ 
+<img alt="SkL" src="https://img.shields.io/badge/react_native-CFFFDC?style=for-the-badge&logo=react&logoColor=black"/>
+ 
+</p>
+
+## Getting Started
+
+### Installation
+
+## Product Screenshots
+
+## Team Members
+
+## Contact Us
+
 ## ML Model
 Mask Detection<br/><br/>
 ![Mask detection]() <br/><br/>
