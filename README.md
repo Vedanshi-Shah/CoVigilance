@@ -31,13 +31,13 @@
 
 ## About the Project
 
-## Real Time Analysis
+### Real Time Analysis
 
-## Notifications 
+### Notifications 
 
-## Safe Systems
+### Safe Systems
 
-## Built With 
+### Built With 
 <p float = "left">
 
 <img alt="SkL" src="https://img.shields.io/badge/SciKit%20Learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white"/>
@@ -52,10 +52,17 @@
  
 <img alt="SkL" src="https://img.shields.io/badge/react_native-CFFFDC?style=for-the-badge&logo=react&logoColor=black"/>
  
-
- 
-
 </p>
+
+## Getting Started
+
+### Installation
+
+## Product Screenshots
+
+## Team Members
+
+## Contact Us
 
 ## ML Model
 Mask Detection<br/><br/>
