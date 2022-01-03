@@ -72,7 +72,9 @@ On our mobile app we prove notifications for the people about the place they hav
 
 ### Installation
 * Clone the repository : 
-```sh git clone https://github.com/Vedanshi-Shah/CoVigilance.git ```
+```sh 
+git clone https://github.com/Vedanshi-Shah/CoVigilance.git 
+```
 
 * Download the test Crowd Videos and then move it in the models folder.
   1. https://drive.google.com/file/d/123DBszblzSVITU1q2fkcxLG1TUTnSwqF/view?usp=sharing
