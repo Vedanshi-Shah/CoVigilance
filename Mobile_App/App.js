@@ -9,6 +9,9 @@ import RegisterScreen from './screens/RegisterScreen';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import HomeScreen from './screens/HomeScreen';
 import Analysis from './screens/Analysis';
+import form from './screens/FAQ';
+import Vaccination from './screens/Vaccination';
+import Subscription from './screens/Subscription';
 const AppStack=createStackNavigator();
 export default function App() {
   const [isFirstLaunch,setisFirstLaunch]=useState(null);
@@ -38,6 +41,9 @@ export default function App() {
           <AppStack.Screen name="Register" component={RegisterScreen} />
           <AppStack.Screen name="Home" component={HomeScreen} />
           <AppStack.Screen name="Charts" component={Analysis} />
+          <AppStack.Screen name="Vaccination" component={Vaccination} />
+          <AppStack.Screen name="FAQ" component={form} />
+          <AppStack.Screen name="Subscription" component={Subscription} />
         </AppStack.Navigator>
       </NavigationContainer>
     );

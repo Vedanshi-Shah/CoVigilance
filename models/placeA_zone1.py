@@ -167,10 +167,11 @@ def pipeline(frame1,frame2):
 		cv2.rectangle(frame,(startX,startY),(endX,endY),color,2)
 		cv2.circle(frame,(cX,cY),5,color,1)
 	cv2.putText(frame,str(len(violate)),(10,frame.shape[0]-25),cv2.FONT_HERSHEY_SIMPLEX,0.85,(0,0,255),3)
+	cv2.imshow('Social Distancing Violation',frame)
 
 	#mask detection
-	frame = imutils.resize(frame2, width=400)
-	(locs, preds) = detect_and_predict_mask(frame, faceNet, maskNet)
+	frame2 = imutils.resize(frame2, width=400)
+	(locs, preds) = detect_and_predict_mask(frame2, faceNet, maskNet)
 	
 	for (box, pred) in zip(locs, preds):
 	# unpack the bounding box and predictions
@@ -190,9 +191,9 @@ def pipeline(frame1,frame2):
 
 		# display the label and bounding box rectangle on the output
 		# framexs
-		cv2.putText(frame, label, (startX, startY - 10),cv2.FONT_HERSHEY_SIMPLEX, 0.45, color, 2)
-		cv2.rectangle(frame, (startX, startY), (endX, endY), color, 2)
-		cv2.imshow('Frame',frame)
+		cv2.putText(frame2, label, (startX, startY - 10),cv2.FONT_HERSHEY_SIMPLEX, 0.45, color, 2)
+		cv2.rectangle(frame2, (startX, startY), (endX, endY), color, 2)
+	cv2.imshow('Mask Violations',frame2)
 	return count_mask_violations,count_social_distancing,frame
 #====================================================================================================#
 
@@ -273,6 +274,6 @@ def generateframe(addr1=0,addr2=0):
 
 #====================================================================================================#
 
-generateframe('crowd1.mp4','crowd1.mp4')
+generateframe('crowd1.mp4','mask2.mp4')
 
 #====================================================================================================#

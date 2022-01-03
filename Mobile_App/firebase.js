@@ -2,13 +2,14 @@ import { initializeApp } from 'firebase/app';
 import {getAuth} from "firebase/auth";
 import {getFirestore} from "firebase/firestore";
 const firebaseConfig = {
-    apiKey: "AIzaSyBdJyWktf6Rq0TJqG7efrfVT3GIVbYhwZ0",
-    authDomain: "healthconnect-d2281.firebaseapp.com",
-    projectId: "healthconnect-d2281",
-    storageBucket: "healthconnect-d2281.appspot.com",
-    messagingSenderId: "346560193175",
-    appId: "1:346560193175:web:64172152847437c857bfd2"
-  };
+  apiKey: "AIzaSyAEfN8F6VGda3RBdSoo5L61oYEbCt8_nZA",
+  authDomain: "covigilence-e6cb0.firebaseapp.com",
+  databaseURL: "https://covigilence-e6cb0-default-rtdb.firebaseio.com",
+  projectId: "covigilence-e6cb0",
+  storageBucket: "covigilence-e6cb0.appspot.com",
+  messagingSenderId: "646156017434",
+  appId: "1:646156017434:web:1570fa18c84f2613d156a3"
+};
   initializeApp(firebaseConfig);
   const auth=getAuth();
   const db=getFirestore();
