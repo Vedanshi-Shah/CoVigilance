@@ -29,6 +29,8 @@
 * [Team Members](#team)
 * [Contact](#contact)
 
+## About the Project
+
 ## ML Model
 Mask Detection<br/><br/>
 ![Mask detection]() <br/><br/>
