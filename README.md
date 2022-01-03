@@ -21,7 +21,6 @@
 * [About the Project](#about-the-project)
   * [Real Time Analysis](#real-time-analysis)
   * [Notifications](#notifications)
-  * [Safe Systems](#safe-systems)
   * [Built With](#built-with)
 * [Getting Started](#getting-started)
   * [Installation](#installation)
@@ -46,7 +45,6 @@ This analysis is available on the mobile app where the user gets to see the dens
 More detailed analysis is available for the admin side wherein he gets to see the count of mask and social distance violations.
 ### Notifications 
 On our mobile app we prove notifications for the people about the place they have subscribed to. We generate these notifications when a crowded place turn safe to visit or a an uncrowded place becomes crowded.
-### Safe Systems
 
 ### Built With 
 <p float = "left">
