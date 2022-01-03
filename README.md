@@ -74,20 +74,27 @@ On our mobile app we prove notifications for the people about the place they hav
 * Clone the repository : 
 ```sh git clone https://github.com/Vedanshi-Shah/CoVigilance.git ```
 
-* Download the test Crowd Videos and Paste then in the models folder.
+* Download the test Crowd Videos and then move it in the models folder.
   1. https://drive.google.com/file/d/123DBszblzSVITU1q2fkcxLG1TUTnSwqF/view?usp=sharing
   2. https://drive.google.com/file/d/12-Chv7a4NsYW6OeJgjHcB-Zf1qxcBJsC/view?usp=sharing
   3. https://drive.google.com/file/d/11zH2IXtrqBTcSzVz7xmrK8JR8clIjYFF/view
   4. https://drive.google.com/file/d/1R2Q9TzEi3FrG_9KFeOy_dm-Di-FwB9o1/view?usp=sharing
 
-* Download the yolov3.weights from the link given below.
+* Download the yolov3.weights from the link given below and move it in models folder.
   1. https://drive.google.com/file/d/1y8RPfw3fANEZsHtjsI7J-WG-cUm2adeb/view?usp=sharing
 
 #### Mobile App 
-1. Set up your expo environment.
+1. Set up your expo environment in the Mobile_App folder.
    ```sh 
    npm i
-   npm start   ```
+   npm start   
+   ```
+2. Set up your React environment in the web-app folder.
+   ```sh 
+   npm i
+   npm start   
+   ```
+3. From models folder run the placeA_zone1.py, placeA_zone2.py, placeA_zone3.py and placeA_zone4.py on different servers simultaneously.
  
 ## Product Screenshots
 
