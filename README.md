@@ -67,8 +67,8 @@ On our mobile app we prove notifications for the people about the place they hav
 
 ### Requirements
 * Python >= 3.8.0
-* Node = 14
-* npm = 6.14
+* TensorFlow
+* SciPy
 
 ### Installation
 * Clone the repository
@@ -85,23 +85,26 @@ On our mobile app we prove notifications for the people about the place they hav
 
 ## Product Screenshots
 
-# ML Model
+## Team Members
+
+## Contact Us
+
+## ML Model
 Mask Detection<br/><br/>
 ![Mask detection]() <br/><br/>
 Social Distancing Detection<br/><br/>
 ![Social distancing]() <br/>
 
-# Web-app
-Analytics Page<br/><br/>
-![Analytics Page]() <br/><br/>
+## Analytics Page
+Total number of violations occuring in real time<br/><br/>
+![Total number of violations occuring in real time]() <br/><br/>
+Total number of violations occuring wrt zones<br/><br/>
+![Total number of violations occuring wrt zones]()<br/><br/>
+Vaccination data pie chart<br/><br/>
+![Vaccination data pie chart]()
 
-# Mobile-app
-Main Page<br/><br/>
-![Main Page]() <br/><br/>
-Zone-wise Page<br/><br/>
-![Zone-wise Page]() <br/><br/>
-FAQ Page<br/><br/>
-![FAQ Page]() <br/><br/>
+## Vaccination Data Extraction
+![Vaccination Data Extraction]()
 
 ## Tech Stack
 * Backend
