@@ -50,7 +50,8 @@ On our mobile app we prove notifications for the people about the place they hav
 
 ### Built With 
 <p float = "left">
-
+<img alt="SkL" src="https://img.shields.io/badge/tensorflow-678983?style=for-the-badge&logo=tensorflow&logoColor=white"/>
+ 
 <img alt="SkL" src="https://img.shields.io/badge/SciKit%20Learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white"/>
 
 <img alt="SkL" src="https://img.shields.io/badge/react-61DAFB?style=for-the-badge&logo=react&logoColor=black"/>
@@ -62,9 +63,6 @@ On our mobile app we prove notifications for the people about the place they hav
 <img alt="SkL" src="https://img.shields.io/badge/firebase-FFBD35?style=for-the-badge&logo=firebase&logoColor=white"/>
  
 <img alt="SkL" src="https://img.shields.io/badge/react_native-CFFFDC?style=for-the-badge&logo=react&logoColor=black"/>
- 
-<img alt="SkL" src="https://img.shields.io/badge/tensorflow-678983?style=for-the-badge&logo=tensorflow&logoColor=white"/>
-
 </p>
 
 ## Getting Started
