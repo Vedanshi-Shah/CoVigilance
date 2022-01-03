@@ -72,7 +72,7 @@ On our mobile app we prove notifications for the people about the place they hav
 
 ### Installation
 * Clone the repository : 
-<p>``` https://github.com/Vedanshi-Shah/CoVigilance.git ```</p>
+```sh git clone https://github.com/Vedanshi-Shah/CoVigilance.git ```
 
 * Download the test Crowd Videos and Paste then in the models folder.
   1. https://drive.google.com/file/d/123DBszblzSVITU1q2fkcxLG1TUTnSwqF/view?usp=sharing
@@ -85,7 +85,9 @@ On our mobile app we prove notifications for the people about the place they hav
 
 #### Mobile App 
 1. Set up your expo environment.
-   <img src="static/carbon (1).png" alt="code1"></a>
+   ```sh 
+   npm i
+   npm start   ```
  
 ## Product Screenshots
 
