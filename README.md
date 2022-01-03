@@ -93,11 +93,11 @@ Analytics Page<br/><br/>
 ![Analytics Page](https://github.com/Vedanshi-Shah/CoVigilance/blob/main/static/web-page.png) <br/><br/>
 # Mobile-app
 Main Page<br/><br/>
-![Main Page](https://github.com/Vedanshi-Shah/CoVigilance/blob/main/static/Main%20page.jpeg) <br/><br/>
+<img src="static/Main%20page.jpeg" alt="Main Page" width="200" height="400"></a><br/>
 Zone-wise Page<br/><br/>
-![Zone-wise Page](https://github.com/Vedanshi-Shah/CoVigilance/blob/main/static/Zone-wise.jpeg) <br/><br/>
+<img src="static/Zone-wise.jpeg" alt="Zone-wise Page" width="200" height="400"></a><br/>
 FAQ Page<br/><br/>
-![FAQ Page](https://github.com/Vedanshi-Shah/CoVigilance/blob/main/static/FAQ.jpeg) <br/><br/>
+<img src="static/FAQ.jpeg" alt="FAQ Page" width="200" height="400"></a><br/>
 
 
 ## Tech Stack
