@@ -19,13 +19,14 @@
 ## Table of Contents
 
 * [About the Project](#about-the-project)
-  *[Real Time Analysis](#Real-time-analysis)
+  * [Real Time Analysis](#Real-time-analysis)
+  * [Notifications](#Notifications)
+  * [Safe Systems](#safe-systems)
+  * [Built With](#built-with)
 * [Getting Started](#getting-started)
-
+  * [Installation](#installation)
 * [Product Screenshots](#Product-Screenshots)
-
-* [Team](#Team)
-
+* [Team Members](#team)
 * [Contact](#contact)
 
 ## ML Model
