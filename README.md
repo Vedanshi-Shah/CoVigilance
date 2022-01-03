@@ -7,7 +7,7 @@
   <p align="center">
     A<strong> solution </strong>to ensure <strong>Crowd Management</strong> with<strong> Contactless</strong> and <strong>Safe Systems</strong>.
     <br />
-    <a href="https://aqua-client.vercel.app/">View Demo</a>
+    <a href="">View Demo</a>
    
   </p>
 </p>
