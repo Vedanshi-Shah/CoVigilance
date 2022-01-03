@@ -85,26 +85,23 @@ On our mobile app we prove notifications for the people about the place they hav
 
 ## Product Screenshots
 
-## Team Members
-
-## Contact Us
-
-## ML Model
+# ML Model
 Mask Detection<br/><br/>
 ![Mask detection]() <br/><br/>
 Social Distancing Detection<br/><br/>
 ![Social distancing]() <br/>
 
-## Analytics Page
-Total number of violations occuring in real time<br/><br/>
-![Total number of violations occuring in real time]() <br/><br/>
-Total number of violations occuring wrt zones<br/><br/>
-![Total number of violations occuring wrt zones]()<br/><br/>
-Vaccination data pie chart<br/><br/>
-![Vaccination data pie chart]()
+# Web-app
+Analytics Page<br/><br/>
+![Analytics Page]() <br/><br/>
 
-## Vaccination Data Extraction
-![Vaccination Data Extraction]()
+# Mobile-app
+Main Page<br/><br/>
+![Main Page]() <br/><br/>
+Zone-wise Page<br/><br/>
+![Zone-wise Page]() <br/><br/>
+FAQ Page<br/><br/>
+![FAQ Page]() <br/><br/>
 
 ## Tech Stack
 * Backend
