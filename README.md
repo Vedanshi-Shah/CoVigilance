@@ -85,26 +85,20 @@ On our mobile app we prove notifications for the people about the place they hav
 
 ## Product Screenshots
 
-## Team Members
-
-## Contact Us
-
 ## ML Model
 Mask Detection<br/><br/>
-![Mask detection]() <br/><br/>
-Social Distancing Detection<br/><br/>
-![Social distancing]() <br/>
+![Mask detection](https://github.com/Vedanshi-Shah/CoVigilance/blob/main/static/ML%20model.jpeg) <br/><br/>
+# Web-app
+Analytics Page<br/><br/>
+![Analytics Page](https://github.com/Vedanshi-Shah/CoVigilance/blob/main/static/FAQ.jpeg) <br/><br/>
+# Mobile-app
+Main Page<br/><br/>
+![Main Page](https://github.com/Vedanshi-Shah/CoVigilance/blob/main/static/Main%20page.jpeg) <br/><br/>
+Zone-wise Page<br/><br/>
+![Zone-wise Page](https://github.com/Vedanshi-Shah/CoVigilance/blob/main/static/Zone-wise.jpeg) <br/><br/>
+FAQ Page<br/><br/>
+![FAQ Page](https://github.com/Vedanshi-Shah/CoVigilance/blob/main/static/FAQ.jpeg) <br/><br/>
 
-## Analytics Page
-Total number of violations occuring in real time<br/><br/>
-![Total number of violations occuring in real time]() <br/><br/>
-Total number of violations occuring wrt zones<br/><br/>
-![Total number of violations occuring wrt zones]()<br/><br/>
-Vaccination data pie chart<br/><br/>
-![Vaccination data pie chart]()
-
-## Vaccination Data Extraction
-![Vaccination Data Extraction]()
 
 ## Tech Stack
 * Backend
