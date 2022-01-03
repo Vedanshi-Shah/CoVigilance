@@ -19,8 +19,8 @@
 ## Table of Contents
 
 * [About the Project](#about-the-project)
-  * [Real Time Analysis](#Real-time-analysis)
-  * [Notifications](#Notifications)
+  * [Real Time Analysis](#real-time-analysis)
+  * [Notifications](#notifications)
   * [Safe Systems](#safe-systems)
   * [Built With](#built-with)
 * [Getting Started](#getting-started)
@@ -30,6 +30,25 @@
 * [Contact](#contact)
 
 ## About the Project
+
+## Real Time Analysis
+
+## Notifications 
+
+## Safe Systems
+
+## Built With 
+<p float = "left">
+
+<img alt="TF" src="https://img.shields.io/badge/Azure-0089D6?style=for-the-badge&logo=microsoft-azure&logoColor=white"/>
+
+<img alt="SkL" src="https://img.shields.io/badge/SciKit%20Learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white"/>
+
+<img alt="SkL" src="https://img.shields.io/badge/react-61DAFB?style=for-the-badge&logo=react&logoColor=black"/>
+
+<img alt="SkL" src="https://img.shields.io/badge/node.js-339933?style=for-the-badge&logo=node.js&logoColor=white"/>
+
+</p>
 
 ## ML Model
 Mask Detection<br/><br/>
