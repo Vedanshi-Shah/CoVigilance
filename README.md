@@ -50,6 +50,8 @@
 
 <img alt="SkL" src="https://img.shields.io/badge/firebase-FFBD35?style=for-the-badge&logo=firebase&logoColor=white"/>
  
+<img alt="SkL" src="https://img.shields.io/badge/react_native-CFFFDC?style=for-the-badge&logo=react&logoColor=black"/>
+ 
 
  
 
