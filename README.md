@@ -30,11 +30,22 @@
 * [Contact](#contact)
 
 ## About the Project
+This project aims to solve the problems of – 
 
+a.)	Administration people at various public places, event organizers, and security people – 
+Managing the crowd and maintaining a safe social distance between them is a major challenge they face. To solve this problem, our team has designed a website that will continuously display the graph of social distancing and mask violations at that particular place. With the help of this, we can minimize the involvement of security personnel and efficient crowd management can be achieved easily. Also, the admin will get a clear idea of which zone is prone to a maximum number of violations and take the necessary actions.
+
+b.)	General Public visiting that particular public place –
+General Public does not have access to crowd data of a particular public place. To solve this problem, our team has designed a mobile app for the users. Our mobile app shows the list of public places, from which the user can subscribe to the public places he/she wants to visit. After subscribing to a particular public place, the user can see the real-time crowd density graph of that particular public place. Also, the user will be notified when the crowd density in that particular place is low. 
+
+Thus, our website aims to solve problems faced by the administration and the mobile app solves problems faced by the general public.
+To overcome 
 ### Real Time Analysis
-
+We provide a real time analysis of the number of violations taking place in a zone. 
+This analysis is available on the mobile app where the user gets to see the density graph and whether a place is safe to visit or not.
+More detailed analysis is available for the admin side wherein he gets to see the count of mask and social distance violations.
 ### Notifications 
-
+On our mobile app we prove notifications for the people about the place they have subscribed to. We generate these notifications when a crowded place turn safe to visit or a an uncrowded place becomes crowded.
 ### Safe Systems
 
 ### Built With 
