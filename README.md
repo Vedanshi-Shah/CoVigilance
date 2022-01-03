@@ -2,13 +2,12 @@
 <br/>
 <p align="center">
   <a href="https://github.com/radioactive11/AQUA">
-    <img src="static/CoVigilence.png" alt="Logo" width="420" height="420">
-
-    
-  </a>
+    <img src="static/CoVigilence.png" alt="Logo" width="420" height="420"></a>
+  
+  A Solution to ensure **Crowd Management** with **Contactless** and **Safe** systems.
 </p>
-# CoVigilance
-A Solution to ensure **Crowd Management** with **Contactless** and **Safe** systems.
+<!-- # CoVigilance -->
+<!-- A Solution to ensure **Crowd Management** with **Contactless** and **Safe** systems. -->
 ## IMP
 
 yolo3.weights file is too large to upload on GitHub.
