@@ -71,11 +71,8 @@ On our mobile app we prove notifications for the people about the place they hav
 * SciPy
 
 ### Installation
-* Clone the repository
-``` https://github.com/Vedanshi-Shah/CoVigilance.git ```
-
-* Install the requirements
-```  ``` 
+* Clone the repository : 
+<p>``` https://github.com/Vedanshi-Shah/CoVigilance.git ```</p>
 
 * Download the test Crowd Videos and Paste then in the models folder.
   1. https://drive.google.com/file/d/123DBszblzSVITU1q2fkcxLG1TUTnSwqF/view?usp=sharing
@@ -83,6 +80,13 @@ On our mobile app we prove notifications for the people about the place they hav
   3. https://drive.google.com/file/d/11zH2IXtrqBTcSzVz7xmrK8JR8clIjYFF/view
   4. https://drive.google.com/file/d/1R2Q9TzEi3FrG_9KFeOy_dm-Di-FwB9o1/view?usp=sharing
 
+* Download the yolov3.weights from the link given below.
+  1. https://drive.google.com/file/d/1y8RPfw3fANEZsHtjsI7J-WG-cUm2adeb/view?usp=sharing
+
+#### Mobile App 
+1. Set up your expo environment.
+   <p>``` npm i ```</p>
+ 
 ## Product Screenshots
 
 ## ML Model
