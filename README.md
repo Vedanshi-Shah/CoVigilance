@@ -1,4 +1,11 @@
 [![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com) [![forthebadge](https://forthebadge.com/images/badges/check-it-out.svg)](https://forthebadge.com) [![forthebadge](https://forthebadge.com/images/badges/made-with-python.svg)](https://forthebadge.com) [![forthebadge](https://forthebadge.com/images/badges/powered-by-coffee.svg)](https://forthebadge.com)
+<br/>
+<p align="center">
+  <a href="https://github.com/radioactive11/AQUA">
+    <img src="STATIC/header.svg" alt="Logo" width="420" height="420">
+
+    
+  </a>
 # CoVigilance
 A Solution to ensure **Crowd Management** with **Contactless** and **Safe** systems.
 ## IMP
