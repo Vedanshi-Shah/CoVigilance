@@ -65,7 +65,23 @@ On our mobile app we prove notifications for the people about the place they hav
 
 ## Getting Started
 
+### Requirements
+* Python >= 3.8.0
+* Node = 14
+* npm = 6.14
+
 ### Installation
+* Clone the repository
+``` https://github.com/Vedanshi-Shah/CoVigilance.git ```
+
+* Install the requirements
+```  ``` 
+
+* Download the test Crowd Videos and Paste then in the models folder.
+  1. https://drive.google.com/file/d/123DBszblzSVITU1q2fkcxLG1TUTnSwqF/view?usp=sharing
+  2. https://drive.google.com/file/d/12-Chv7a4NsYW6OeJgjHcB-Zf1qxcBJsC/view?usp=sharing
+  3. https://drive.google.com/file/d/11zH2IXtrqBTcSzVz7xmrK8JR8clIjYFF/view
+  4. https://drive.google.com/file/d/1R2Q9TzEi3FrG_9KFeOy_dm-Di-FwB9o1/view?usp=sharing
 
 ## Product Screenshots
 
