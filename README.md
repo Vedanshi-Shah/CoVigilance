@@ -4,7 +4,12 @@
   <a href="https://github.com/radioactive11/AQUA">
     <img src="static/CoVigilence.png" alt="Logo" width="420" height="420"></a>
   
-  A Solution to ensure **Crowd Management** with **Contactless** and **Safe** systems.
+  <p align="center">
+    A<strong> solution</strong>to ensure <strong>Crowd Management</strong> with<strong>Contactless</strong> and <strong>Safe Systems</strong>.
+    <br />
+    <a href="https://aqua-client.vercel.app/">View Demo</a>
+   
+  </p>
 </p>
 <!-- # CoVigilance -->
 <!-- A Solution to ensure **Crowd Management** with **Contactless** and **Safe** systems. -->
