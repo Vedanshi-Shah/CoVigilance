@@ -133,4 +133,3 @@ FAQ Page<br/><br/>
 1. [Om Khare](https://github.com/OmKhare)
 2. [Harshmohan Kulkarni](https://github.com/harshmohan07)
 3. [Vedanshi Shah](https://github.com/Vedanshi-Shah)
-4. [Prerna Tulsiani](https://github.com/pt3002)
