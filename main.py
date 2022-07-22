@@ -1,4 +1,3 @@
-
 import streamlit as st
 import pandas as pd
 import cv2
@@ -153,7 +152,6 @@ def pipeline(frame1,frame2):
         cv2.rectangle(frame,(startX,startY),(endX,endY),color,2)
         cv2.circle(frame,(cX,cY),5,color,1)
     cv2.putText(frame,str(len(violate)),(10,frame.shape[0]-25),cv2.FONT_HERSHEY_SIMPLEX,0.85,(0,0,255),3)
-    cv2.imshow('Social Distancing Violation',frame)
 
     #mask detection
     frame2 = imutils.resize(frame2, width=400)
@@ -179,7 +177,6 @@ def pipeline(frame1,frame2):
         # framexs
         cv2.putText(frame2, label, (startX, startY - 10),cv2.FONT_HERSHEY_SIMPLEX, 0.45, color, 2)
         cv2.rectangle(frame2, (startX, startY), (endX, endY), color, 2)
-    cv2.imshow('Mask Violations',frame2)
     return count_mask_violations,count_social_distancing,frame
 def object_detection_video():
     x=[]
@@ -259,9 +256,6 @@ def object_detection_video():
                     prev_val=avg
                     #ws.send(json.dumps({'socialD':socialD,'mask':mask}))
             frame_count+=1
-            key = cv2.waitKey(1) & 0xFF
-            if key == ord("q"):
-                break
         cap1.release()
         cap2.release()
         cv2.destroyAllWindows()
@@ -525,7 +519,4 @@ def main():
         
 
 if __name__ == '__main__':
-		main()	
-
-
-
+	main()	
