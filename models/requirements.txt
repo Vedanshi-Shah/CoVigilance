@@ -15,7 +15,6 @@ keras
 keras-nightly
 Keras-Preprocessing
 opencv-contrib-python
-opencv-python
 opencv-python-headless
 glib
 
