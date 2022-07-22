@@ -1,6 +1,5 @@
 streamlit
 pandas
-opencv-python
 numpy
 streamlit-embedcode
 requests-file
@@ -15,3 +14,8 @@ tensorflow-io-gcs-filesystem
 keras
 keras-nightly
 Keras-Preprocessing
+opencv-contrib-python
+opencv-python
+opencv-python-headless
+glib
+
