@@ -19,3 +19,5 @@ scipy
 firebase
 python-jwt
 gcloud
+sseclient
+pycrypto
