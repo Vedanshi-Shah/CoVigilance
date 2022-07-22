@@ -12,7 +12,8 @@ from scipy.spatial import distance as dist
 from tensorflow.keras.models import load_model
 from tensorflow.keras.applications.mobilenet_v2 import preprocess_input
 from tensorflow.keras.preprocessing.image import img_to_array
-# from firebase import firebase
+from firebase import firebase
+firebase = firebase.FirebaseApplication('https://covigilence1-ecf6e-default-rtdb.asia-southeast1.firebasedatabase.app/', None)
 if(not os.path.exists('yolov3.weights')):
     
     url = "https://pjreddie.com/media/files/yolov3.weights"
@@ -245,14 +246,14 @@ def object_detection_video():
                         'total':total,
                     }
                     #data=json.dumps(data,indent=4)
-                    #firebase.post('/placeA/zone1/data/',data)
+                    firebase.post('/placeA/zone1/data/',data)
                     if count%31 == 0:
                         if (crowded > normal):
                             data_count = {'count' : 1}
-                            #firebase.post('/placeA/zone1/count/',data_count)
+                            firebase.post('/placeA/zone1/count/',data_count)
                         else:
                             data_count = {'count' : 0}
-                            #firebase.post('/placeA/zone1/count/',data_count)
+                            firebase.post('/placeA/zone1/count/',data_count)
                     prev_val=avg
                     #ws.send(json.dumps({'socialD':socialD,'mask':mask}))
             frame_count+=1
@@ -519,4 +520,4 @@ def main():
         
 
 if __name__ == '__main__':
-	main()	
+		main()	
