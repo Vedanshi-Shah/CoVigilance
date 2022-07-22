@@ -1,11 +1,5 @@
-import 'react-app-polyfill/stable'
-import 'core-js'
-import React from 'react'
-import ReactDOM from 'react-dom'
-import App from './App'
-import { Provider } from 'react-redux'
-import store from './store'
 import { initializeApp } from 'firebase/app'
+import 'firebase/auth'
 
 // Use your config values here.
 const firebaseConfig = {
@@ -20,10 +14,5 @@ const firebaseConfig = {
 }
 
 const app = initializeApp(firebaseConfig)
-
-ReactDOM.render(
-  <Provider store={store}>
-    <App />
-  </Provider>,
-  document.getElementById('root'),
-)
+export const auth = app.auth()
+export default app

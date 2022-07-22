@@ -35,3 +35,4 @@ const AppContent = () => {
 }
 
 export default React.memo(AppContent)
+//Basically if the props of the component aren't changing then the React will use the last rendered result and wont rerender it. Helps in performance boost.

@@ -73,7 +73,7 @@ export default function Zone1() {
       },
       title: {
         display: true,
-        text: 'Chart.js Line Chart',
+        text: 'Violations',
       },
     },
   }
