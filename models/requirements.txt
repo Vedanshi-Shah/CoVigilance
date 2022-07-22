@@ -15,4 +15,4 @@ keras
 keras-nightly
 Keras-Preprocessing
 opencv-python-headless
-
+scipy
