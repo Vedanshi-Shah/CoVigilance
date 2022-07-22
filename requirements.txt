@@ -39,8 +39,6 @@ click==8.0.3
 colorama
 colorlover==0.3.0
 commonmark==0.9.1
-conda==4.10.3
-conda-package-handling 
 constantly==15.1.0
 constants==0.6.0
 crc32c==2.3
