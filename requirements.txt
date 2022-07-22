@@ -17,3 +17,4 @@ Keras-Preprocessing
 opencv-python-headless
 scipy
 firebase
+python-jwt
