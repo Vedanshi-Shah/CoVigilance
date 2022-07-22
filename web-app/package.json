@@ -41,7 +41,7 @@
     "classnames": "^2.3.1",
     "core-js": "^3.19.1",
     "enzyme": "^3.11.0",
-    "firebase": "^9.6.1",
+    "firebase": "^9.9.0",
     "prop-types": "^15.8.1",
     "react": "^17.0.2",
     "react-app-polyfill": "^2.0.0",

@@ -61,6 +61,7 @@ import {
   Legend,
 } from 'chart.js'
 import { Line } from 'react-chartjs-2'
+import { AppSidebar, AppHeader } from "src/components/index";
 const WidgetsDropdown = lazy(() => import('../widgets/WidgetsDropdown.js'))
 const WidgetsBrand = lazy(() => import('../widgets/WidgetsBrand.js'))
 export default function Zone1() {
@@ -210,141 +211,161 @@ export default function Zone1() {
 
   return (
     <>
-      <h2>Zone-2</h2>
-      <WidgetsDropdown />
-      <CCard className="mb-4">
-        <CCardBody>
-          <CRow>
-            <CCol sm={5}>
-              <h4 id="traffic" className="card-title mb-0">
-                No. of Violations
-              </h4>
-              <div className="small text-medium-emphasis">Occuring real-time</div>
-            </CCol>
-            <CCol sm={7} className="d-none d-md-block">
-              <CButton color="primary" className="float-end">
-                <CIcon icon={cilCloudDownload} />
-              </CButton>
-            </CCol>
-          </CRow>
-          {/* <CChartLine
-            style={{ height: '300px', marginTop: '40px' }}
-            data={data}
-            options={{
-              maintainAspectRatio: false,
-              plugins: {
-                legend: {
-                  display: false,
-                },
-              },
-              scales: {
-                x: {
-                  grid: {
-                    drawOnChartArea: true,
-                  },
-                },
-                y: {
-                  ticks: {
-                    beginAtZero: true,
-                    maxTicksLimit: 5,
-                    stepSize: Math.ceil(25 / 25),
-                    max: 250,
-                  },
-                },
-              },
-              elements: {
-                line: {
-                  tension: 0.4,
-                },
-                point: {
-                  radius: 0,
-                  hitRadius: 10,
-                  hoverRadius: 4,
-                  hoverBorderWidth: 3,
-                },
-              },
-            }}
-          /> */}
-          <Line data={data} options={options} />
-        </CCardBody>
-      </CCard>
-
-      {/* <WidgetsBrand withCharts /> */}
-
-      <CRow>
-        <CCol xs>
+      <div>
+        <AppSidebar />
+        <div className="wrapper d-flex flex-column min-vh-100 bg-light">
+          <AppHeader />
+          <div className="body flex-grow-1 px-3">
+          <h2>Zone-2</h2>
+          <WidgetsDropdown />
           <CCard className="mb-4">
-            <CCardHeader>User Info</CCardHeader>
             <CCardBody>
               <CRow>
-                <CCol xs={12} md={6} xl={6}>
+                <CCol sm={5}>
+                  <h4 id="traffic" className="card-title mb-0">
+                    No. of Violations
+                  </h4>
+                  <div className="small text-medium-emphasis">
+                    Occuring real-time
+                  </div>
+                </CCol>
+                <CCol sm={7} className="d-none d-md-block">
+                  <CButton color="primary" className="float-end">
+                    <CIcon icon={cilCloudDownload} />
+                  </CButton>
+                </CCol>
+              </CRow>
+              {/* <CChartLine
+                style={{ height: '300px', marginTop: '40px' }}
+                data={data}
+                options={{
+                  maintainAspectRatio: false,
+                  plugins: {
+                    legend: {
+                      display: false,
+                    },
+                  },
+                  scales: {
+                    x: {
+                      grid: {
+                        drawOnChartArea: true,
+                      },
+                    },
+                    y: {
+                      ticks: {
+                        beginAtZero: true,
+                        maxTicksLimit: 5,
+                        stepSize: Math.ceil(25 / 25),
+                        max: 250,
+                      },
+                    },
+                  },
+                  elements: {
+                    line: {
+                      tension: 0.4,
+                    },
+                    point: {
+                      radius: 0,
+                      hitRadius: 10,
+                      hoverRadius: 4,
+                      hoverBorderWidth: 3,
+                    },
+                  },
+                }}
+              /> */}
+              <Line data={data} options={options} />
+            </CCardBody>
+          </CCard>
+
+          {/* <WidgetsBrand withCharts /> */}
+
+          <CRow>
+            <CCol xs>
+              <CCard className="mb-4">
+                <CCardHeader>User Info</CCardHeader>
+                <CCardBody>
                   <CRow>
-                    <CCol sm={6}>
-                      <div className="border-start border-start-4 border-start-info py-1 px-3">
-                        <div className="text-medium-emphasis small">Users Online</div>
-                        <div className="fs-5 fw-semibold">9,123</div>
-                      </div>
-                    </CCol>
-                    <CCol sm={6}>
-                      <div className="border-start border-start-4 border-start-danger py-1 px-3 mb-3">
-                        <div className="text-medium-emphasis small">Users Offline</div>
-                        <div className="fs-5 fw-semibold">22,643</div>
-                      </div>
+                    <CCol xs={12} md={6} xl={6}>
+                      <CRow>
+                        <CCol sm={6}>
+                          <div className="border-start border-start-4 border-start-info py-1 px-3">
+                            <div className="text-medium-emphasis small">
+                              Users Online
+                            </div>
+                            <div className="fs-5 fw-semibold">9,123</div>
+                          </div>
+                        </CCol>
+                        <CCol sm={6}>
+                          <div className="border-start border-start-4 border-start-danger py-1 px-3 mb-3">
+                            <div className="text-medium-emphasis small">
+                              Users Offline
+                            </div>
+                            <div className="fs-5 fw-semibold">22,643</div>
+                          </div>
+                        </CCol>
+                      </CRow>
+
+                      {/* <hr className="mt-0" />
+                      {progressGroupExample2.map((item, index) => (
+                        <div className="progress-group mb-4" key={index}>
+                          <div className="progress-group-header">
+                            <CIcon className="me-2" icon={item.icon} size="lg" />
+                            <span>{item.title}</span>
+                            <span className="ms-auto fw-semibold">{item.value}%</span>
+                          </div>
+                          <div className="progress-group-bars">
+                            <CProgress thin color="warning" value={item.value} />
+                          </div>
+                        </div>
+                      ))} */}
                     </CCol>
                   </CRow>
 
-                  {/* <hr className="mt-0" />
-                  {progressGroupExample2.map((item, index) => (
-                    <div className="progress-group mb-4" key={index}>
-                      <div className="progress-group-header">
-                        <CIcon className="me-2" icon={item.icon} size="lg" />
-                        <span>{item.title}</span>
-                        <span className="ms-auto fw-semibold">{item.value}%</span>
-                      </div>
-                      <div className="progress-group-bars">
-                        <CProgress thin color="warning" value={item.value} />
-                      </div>
-                    </div>
-                  ))} */}
-                </CCol>
-              </CRow>
+                  <br />
 
-              <br />
-
-              <CTable align="middle" className="mb-0 border" hover responsive>
-                <CTableHead color="light">
-                  <CTableRow>
-                    <CTableHeaderCell className="text-center">
-                      <CIcon icon={cilPeople} />
-                    </CTableHeaderCell>
-                    <CTableHeaderCell>User</CTableHeaderCell>
-                    <CTableHeaderCell>Activity</CTableHeaderCell>
-                  </CTableRow>
-                </CTableHead>
-                <CTableBody>
-                  {tableExample.map((item, index) => (
-                    <CTableRow v-for="item in tableItems" key={index}>
-                      <CTableDataCell className="text-center">
-                        <CAvatar size="md" src={item.avatar.src} status={item.avatar.status} />
-                      </CTableDataCell>
-                      <CTableDataCell>
-                        <div>{item.user.name}</div>
-                        <div className="small text-medium-emphasis">
-                          Registered: {item.user.registered}
-                        </div>
-                      </CTableDataCell>
-                      <CTableDataCell>
-                        <div className="small text-medium-emphasis">Last login</div>
-                        <strong>{item.activity}</strong>
-                      </CTableDataCell>
-                    </CTableRow>
-                  ))}
-                </CTableBody>
-              </CTable>
-            </CCardBody>
-          </CCard>
-        </CCol>
-      </CRow>
+                  <CTable align="middle" className="mb-0 border" hover responsive>
+                    <CTableHead color="light">
+                      <CTableRow>
+                        <CTableHeaderCell className="text-center">
+                          <CIcon icon={cilPeople} />
+                        </CTableHeaderCell>
+                        <CTableHeaderCell>User</CTableHeaderCell>
+                        <CTableHeaderCell>Activity</CTableHeaderCell>
+                      </CTableRow>
+                    </CTableHead>
+                    <CTableBody>
+                      {tableExample.map((item, index) => (
+                        <CTableRow v-for="item in tableItems" key={index}>
+                          <CTableDataCell className="text-center">
+                            <CAvatar
+                              size="md"
+                              src={item.avatar.src}
+                              status={item.avatar.status}
+                            />
+                          </CTableDataCell>
+                          <CTableDataCell>
+                            <div>{item.user.name}</div>
+                            <div className="small text-medium-emphasis">
+                              Registered: {item.user.registered}
+                            </div>
+                          </CTableDataCell>
+                          <CTableDataCell>
+                            <div className="small text-medium-emphasis">
+                              Last login
+                            </div>
+                            <strong>{item.activity}</strong>
+                          </CTableDataCell>
+                        </CTableRow>
+                      ))}
+                    </CTableBody>
+                  </CTable>
+                </CCardBody>
+              </CCard>
+            </CCol>
+          </CRow>
+          </div>
+        </div>
+      </div>
     </>
-  )
+  );
 }

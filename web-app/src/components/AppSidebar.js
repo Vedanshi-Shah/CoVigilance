@@ -27,7 +27,7 @@ const AppSidebar = () => {
       unfoldable={unfoldable}
       visible={sidebarShow}
       onVisibleChange={(visible) => {
-        dispatch({ type: 'set', sidebarShow: visible })
+        dispatch({ type: "set", sidebarShow: visible });
       }}
     >
       <CSidebarBrand className="d-none d-md-flex" to="/">
@@ -39,10 +39,100 @@ const AppSidebar = () => {
       <CSidebarNav>
         <SimpleBar>
           <AppSidebarNav items={navigation} />
+          <a
+            class="nav-link"
+            href="https://vedanshi-shah-covigilance-main-dev-vedanshi-3aho1z.streamlitapp.com/"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 512 512"
+              class="nav-icon"
+              role="img"
+            >
+              <path
+                fill="var(--ci-primary-color, currentColor)"
+                d="M440,464V16H72V464H16v32H496V464Zm-32,0H272V400H240v64H104V48H408Z"
+                class="ci-primary"
+              ></path>
+              <rect
+                width="32"
+                height="32"
+                x="160"
+                y="304"
+                fill="var(--ci-primary-color, currentColor)"
+                class="ci-primary"
+              ></rect>
+              <rect
+                width="32"
+                height="32"
+                x="240"
+                y="304"
+                fill="var(--ci-primary-color, currentColor)"
+                class="ci-primary"
+              ></rect>
+              <rect
+                width="32"
+                height="32"
+                x="320"
+                y="304"
+                fill="var(--ci-primary-color, currentColor)"
+                class="ci-primary"
+              ></rect>
+              <rect
+                width="32"
+                height="32"
+                x="160"
+                y="208"
+                fill="var(--ci-primary-color, currentColor)"
+                class="ci-primary"
+              ></rect>
+              <rect
+                width="32"
+                height="32"
+                x="240"
+                y="208"
+                fill="var(--ci-primary-color, currentColor)"
+                class="ci-primary"
+              ></rect>
+              <rect
+                width="32"
+                height="32"
+                x="320"
+                y="208"
+                fill="var(--ci-primary-color, currentColor)"
+                class="ci-primary"
+              ></rect>
+              <rect
+                width="32"
+                height="32"
+                x="160"
+                y="112"
+                fill="var(--ci-primary-color, currentColor)"
+                class="ci-primary"
+              ></rect>
+              <rect
+                width="32"
+                height="32"
+                x="240"
+                y="112"
+                fill="var(--ci-primary-color, currentColor)"
+                class="ci-primary"
+              ></rect>
+              <rect
+                width="32"
+                height="32"
+                x="320"
+                y="112"
+                fill="var(--ci-primary-color, currentColor)"
+                class="ci-primary"
+              ></rect>
+            </svg>
+            Upload
+          </a>
         </SimpleBar>
       </CSidebarNav>
     </CSidebar>
-  )
+  );
 }
 
 export default React.memo(AppSidebar)
