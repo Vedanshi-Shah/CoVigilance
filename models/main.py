@@ -2,42 +2,18 @@
 import streamlit as st
 import pandas as pd
 import cv2
-from PIL import Image, ImageEnhance
 import numpy as np
 import os
-#import tensorflow as tf
-#import tensorflow_hub as hub
-import time ,sys
 from streamlit_embedcode import github_gist
-import urllib.request
-import urllib
-import moviepy.editor as moviepy
-import cv2
-import numpy as np
 import time
 import sys
-import json
 import requests
-import redis
-import websocket
-import time
-import random
-import cv2
 import imutils
-import cv2
-import os
-import argparse
-import numpy as np
-import matplotlib.pyplot as plt
-from os.path import dirname, join
-from imutils.video import VideoStream
 from scipy.spatial import distance as dist
-from scipy.spatial.distance import euclidean
 from tensorflow.keras.models import load_model
 from tensorflow.keras.applications.mobilenet_v2 import preprocess_input
 from tensorflow.keras.preprocessing.image import img_to_array
-from firebase import firebase
-from cryptography.fernet import Fernet
+# from firebase import firebase
 if(not os.path.exists('yolov3.weights')):
     
     url = "https://pjreddie.com/media/files/yolov3.weights"
