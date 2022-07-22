@@ -2,12 +2,13 @@ streamlit==1.11.0
 pandas==1.3.3
 opencv-python==4.5.3.56
 numpy==1.23.1
-time
-sys
-streamlit_embedcode
-requests
-imutils
-scipy
+streamlit-embedcode==0.1.2
+requests @ file:///tmp/build/80754af9/requests_1608241421344/work
+requests-file==1.5.1
+requests-oauthlib==1.3.0
+requests-toolbelt==0.9.1
+imutils==0.5.4
+scipy @ file:///C:/ci/scipy_1630606917240/work
 tensorboard-plugin-wit==1.8.0
 tensorflow==2.6.0
 tensorflow-cpu==2.7.0
