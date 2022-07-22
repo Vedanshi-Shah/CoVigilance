@@ -23,7 +23,7 @@ if(not os.path.exists('yolov3.weights')):
 
 net=cv2.dnn.readNetFromDarknet("yolov3.cfg","yolov3.weights")
 ln = net.getLayerNames()
-ln = [ln[i[0] - 1] for i in net.getUnconnectedOutLayers()]
+ln = [ln[i - 1] for i in net.getUnconnectedOutLayers()]
 
 prototxtPath = r"deploy.protext"
 weightsPath = r"res10_300x300_ssd_iter_140000.caffemodel"
