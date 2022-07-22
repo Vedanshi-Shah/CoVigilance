@@ -18,3 +18,4 @@ opencv-python-headless
 scipy
 firebase
 python-jwt
+gcloud
