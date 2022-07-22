@@ -21,5 +21,5 @@ python-jwt
 firebase-admin
 gcloud
 sseclient
-pycrypto
+PyCryptodome
 crypto
