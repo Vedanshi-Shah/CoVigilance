@@ -1,3 +1,4 @@
+
 import streamlit as st
 import pandas as pd
 import cv2
@@ -37,14 +38,12 @@ from tensorflow.keras.applications.mobilenet_v2 import preprocess_input
 from tensorflow.keras.preprocessing.image import img_to_array
 from firebase import firebase
 from cryptography.fernet import Fernet
-#firebase = firebase.FirebaseApplication('https://ppl-project-f6669-default-rtdb.asia-southeast1.firebasedatabase.app/', None)
-#====================================================================================================#
-
-#Fetching all the ML Models.
-
-#====================================================================================================#
-#https://drive.google.com/file/d/1y8RPfw3fANEZsHtjsI7J-WG-cUm2adeb/view?usp=sharing
-#As the file size was too large, the "yolov3.weights" file is on the drive file mentioned above.
+if(not os.path.exists('yolov3.weights')):
+    
+    url = "https://pjreddie.com/media/files/yolov3.weights"
+    r = requests.get(url, allow_redirects=True)
+    open('yolov3.weights', 'wb').write(r.content)
+    time.sleep(15)
 
 net=cv2.dnn.readNetFromDarknet("yolov3.cfg","yolov3.weights")
 ln = net.getLayerNames()
@@ -54,11 +53,6 @@ prototxtPath = r"deploy.protext"
 weightsPath = r"res10_300x300_ssd_iter_140000.caffemodel"
 faceNet = cv2.dnn.readNet(prototxtPath, weightsPath)
 maskNet = load_model("mask_detector.model")
-#====================================================================================================#
-
-#Defining all the necessary functions.
-
-#====================================================================================================#
 def people_detection(frame,net,ln,id=0):
     (H,W)=frame.shape[:2]
     results=[]
@@ -158,58 +152,59 @@ def detect_and_predict_mask(frame, faceNet, maskNet):
 
 #====================================================================================================#
 def pipeline(frame1,frame2):
-	count_social_distancing = 0
-	count_mask_violations = 0
-	#Social Distancing Detection.
-	frame = imutils.resize(frame1,width=700)
-	results=people_detection(frame,net,ln,0)
-	violate=set()
-	if(len(results)>=2):
-		centroids=np.array([r[2] for r in results])
-		D=dist.cdist(centroids,centroids,metric="euclidean")
-		for i in range(0,D.shape[0]):
-			for j in range(i+1,D.shape[1]):
-				if D[i,j]<50:
-					violate.add(i)
-					violate.add(j)
-	for (i,(prob,bbox,centroid)) in enumerate(results):
-		(startX,startY,endX,endY)=bbox
-		(cX,cY)=centroid
-		color=(0,255,0)
-		if i in violate:
-			count_social_distancing += 1
-			color=(0,0,255)
-		cv2.rectangle(frame,(startX,startY),(endX,endY),color,2)
-		cv2.circle(frame,(cX,cY),5,color,1)
-	cv2.putText(frame,str(len(violate)),(10,frame.shape[0]-25),cv2.FONT_HERSHEY_SIMPLEX,0.85,(0,0,255),3)
-	cv2.imshow('Social Distancing Violation',frame)
+    
+    count_social_distancing = 0
+    count_mask_violations = 0
+    #Social Distancing Detection.
+    frame = imutils.resize(frame1,width=700)
+    results=people_detection(frame,net,ln,0)
+    violate=set()
+    if(len(results)>=2):
+        centroids=np.array([r[2] for r in results])
+        D=dist.cdist(centroids,centroids,metric="euclidean")
+        for i in range(0,D.shape[0]):
+            for j in range(i+1,D.shape[1]):
+                if D[i,j]<50:
+                    violate.add(i)
+                    violate.add(j)
+    for (i,(prob,bbox,centroid)) in enumerate(results):
+        (startX,startY,endX,endY)=bbox
+        (cX,cY)=centroid
+        color=(0,255,0)
+        if i in violate:
+            count_social_distancing += 1
+            color=(0,0,255)
+        cv2.rectangle(frame,(startX,startY),(endX,endY),color,2)
+        cv2.circle(frame,(cX,cY),5,color,1)
+    cv2.putText(frame,str(len(violate)),(10,frame.shape[0]-25),cv2.FONT_HERSHEY_SIMPLEX,0.85,(0,0,255),3)
+    cv2.imshow('Social Distancing Violation',frame)
 
-	#mask detection
-	frame2 = imutils.resize(frame2, width=400)
-	(locs, preds) = detect_and_predict_mask(frame2, faceNet, maskNet)
-	
-	for (box, pred) in zip(locs, preds):
-	# unpack the bounding box and predictions
-		(startX, startY, endX, endY) = box
-		(mask, withoutMask) = pred
+    #mask detection
+    frame2 = imutils.resize(frame2, width=400)
+    (locs, preds) = detect_and_predict_mask(frame2, faceNet, maskNet)
 
-		# determine the class label and color we'll use to draw
-		# the bounding box and text
-		label = "Mask" if mask > withoutMask else "No Mask"
-		color = (0, 255, 0) if label == "Mask" else (0, 0, 255)
+    for (box, pred) in zip(locs, preds):
+    # unpack the bounding box and predictions
+        (startX, startY, endX, endY) = box
+        (mask, withoutMask) = pred
 
-		if mask < withoutMask:
-			count_mask_violations += 1
+        # determine the class label and color we'll use to draw
+        # the bounding box and text
+        label = "Mask" if mask > withoutMask else "No Mask"
+        color = (0, 255, 0) if label == "Mask" else (0, 0, 255)
 
-		# include the probability in the label
-		label = "{}: {:.2f}%".format(label, max(mask, withoutMask) * 100)
+        if mask < withoutMask:
+            count_mask_violations += 1
 
-		# display the label and bounding box rectangle on the output
-		# framexs
-		cv2.putText(frame2, label, (startX, startY - 10),cv2.FONT_HERSHEY_SIMPLEX, 0.45, color, 2)
-		cv2.rectangle(frame2, (startX, startY), (endX, endY), color, 2)
-	cv2.imshow('Mask Violations',frame2)
-	return count_mask_violations,count_social_distancing,frame
+        # include the probability in the label
+        label = "{}: {:.2f}%".format(label, max(mask, withoutMask) * 100)
+
+        # display the label and bounding box rectangle on the output
+        # framexs
+        cv2.putText(frame2, label, (startX, startY - 10),cv2.FONT_HERSHEY_SIMPLEX, 0.45, color, 2)
+        cv2.rectangle(frame2, (startX, startY), (endX, endY), color, 2)
+    cv2.imshow('Mask Violations',frame2)
+    return count_mask_violations,count_social_distancing,frame
 def object_detection_video():
     x=[]
     y=[]
@@ -429,94 +424,95 @@ def object_detection_video():
         
         
 
-def object_detection_image():
-    st.title('Object Detection for Images')
-    st.subheader("""
-    This object detection project takes in an image and outputs the image with bounding boxes created around the objects in the image
-    """)
-    file = st.file_uploader('Upload Image', type = ['jpg','png','jpeg'])
-    if file!= None:
-        img1 = Image.open(file)
-        img2 = np.array(img1)
+# def object_detection_image():
+#     st.title('Object Detection for Images')
+#     st.subheader("""
+#     This object detection project takes in an image and outputs the image with bounding boxes created around the objects in the image
+#     """)
+#     file = st.file_uploader('Upload Image', type = ['jpg','png','jpeg'])
+#     if file!= None:
+#         img1 = Image.open(file)
+#         img2 = np.array(img1)
 
-        st.image(img1, caption = "Uploaded Image")
-        my_bar = st.progress(0)
-        confThreshold =st.slider('Confidence', 0, 100, 50)
-        nmsThreshold= st.slider('Threshold', 0, 100, 20)
-        #classNames = []
-        whT = 320
-        url = "https://raw.githubusercontent.com/zhoroh/ObjectDetection/master/labels/coconames.txt"
-        f = urllib.request.urlopen(url)
-        classNames = [line.decode('utf-8').strip() for  line in f]
-        #f = open(r'C:\Users\Olazaah\Downloads\stream\labels\coconames.txt','r')
-        #lines = f.readlines()
-        #classNames = [line.strip() for line in lines]
-        config_path = r'config_n_weights\yolov3.cfg'
-        weights_path = r'config_n_weights\yolov3.weights'
-        net = cv2.dnn.readNetFromDarknet(config_path, weights_path)
-        net.setPreferableBackend(cv2.dnn.DNN_BACKEND_OPENCV)
-        net.setPreferableTarget(cv2.dnn.DNN_TARGET_CPU)
+#         st.image(img1, caption = "Uploaded Image")
+#         my_bar = st.progress(0)
+#         confThreshold =st.slider('Confidence', 0, 100, 50)
+#         nmsThreshold= st.slider('Threshold', 0, 100, 20)
+#         #classNames = []
+#         whT = 320
+#         url = "https://raw.githubusercontent.com/zhoroh/ObjectDetection/master/labels/coconames.txt"
+#         f = urllib.request.urlopen(url)
+#         classNames = [line.decode('utf-8').strip() for  line in f]
+#         #f = open(r'C:\Users\Olazaah\Downloads\stream\labels\coconames.txt','r')
+#         #lines = f.readlines()
+#         #classNames = [line.strip() for line in lines]
+#         config_path = 'yolov3.cfg'
+#         weights_path = 'yolov3.weights'
+#         net = cv2.dnn.readNetFromDarknet(config_path, weights_path)
+#         net.setPreferableBackend(cv2.dnn.DNN_BACKEND_OPENCV)
+#         net.setPreferableTarget(cv2.dnn.DNN_TARGET_CPU)
 
-        def findObjects(outputs,img):
-            hT, wT, cT = img2.shape
-            bbox = []
-            classIds = []
-            confs = []
-            for output in outputs:
-                for det in output:
-                    scores = det[5:]
-                    classId = np.argmax(scores)
-                    confidence = scores[classId]
-                    if confidence > (confThreshold/100):
-                        w,h = int(det[2]*wT) , int(det[3]*hT)
-                        x,y = int((det[0]*wT)-w/2) , int((det[1]*hT)-h/2)
-                        bbox.append([x,y,w,h])
-                        classIds.append(classId)
-                        confs.append(float(confidence))
+#         def findObjects(outputs,img):
+#             hT, wT, cT = img2.shape
+#             bbox = []
+#             classIds = []
+#             confs = []
+#             for output in outputs:
+#                 for det in output:
+#                     scores = det[5:]
+#                     classId = np.argmax(scores)
+#                     confidence = scores[classId]
+#                     if confidence > (confThreshold/100):
+#                         w,h = int(det[2]*wT) , int(det[3]*hT)
+#                         x,y = int((det[0]*wT)-w/2) , int((det[1]*hT)-h/2)
+#                         bbox.append([x,y,w,h])
+#                         classIds.append(classId)
+#                         confs.append(float(confidence))
         
-            indices = cv2.dnn.NMSBoxes(bbox, confs, confThreshold/100, nmsThreshold/100)
-            obj_list=[]
-            confi_list =[]
-            #drawing rectangle around object
-            for i in indices:
-                i = i
-                box = bbox[i]
-                x, y, w, h = box[0], box[1], box[2], box[3]
-                # print(x,y,w,h)
-                cv2.rectangle(img2, (x, y), (x+w,y+h), (240, 54 , 230), 2)
-                #print(i,confs[i],classIds[i])
-                obj_list.append(classNames[classIds[i]].upper())
+#             indices = cv2.dnn.NMSBoxes(bbox, confs, confThreshold/100, nmsThreshold/100)
+#             obj_list=[]
+#             confi_list =[]
+#             #drawing rectangle around object
+#             for i in indices:
+#                 i = i
+#                 box = bbox[i]
+#                 x, y, w, h = box[0], box[1], box[2], box[3]
+#                 # print(x,y,w,h)
+#                 cv2.rectangle(img2, (x, y), (x+w,y+h), (240, 54 , 230), 2)
+#                 #print(i,confs[i],classIds[i])
+#                 obj_list.append(classNames[classIds[i]].upper())
                 
-                confi_list.append(int(confs[i]*100))
-                cv2.putText(img2,f'{classNames[classIds[i]].upper()} {int(confs[i]*100)}%',
-                          (x, y-10), cv2.FONT_HERSHEY_SIMPLEX, 1, (240, 0, 240), 2)
-            df= pd.DataFrame(list(zip(obj_list,confi_list)),columns=['Object Name','Confidence'])
-            if st.checkbox("Show Object's list" ):
+#                 confi_list.append(int(confs[i]*100))
+#                 cv2.putText(img2,f'{classNames[classIds[i]].upper()} {int(confs[i]*100)}%',
+#                           (x, y-10), cv2.FONT_HERSHEY_SIMPLEX, 1, (240, 0, 240), 2)
+#             df= pd.DataFrame(list(zip(obj_list,confi_list)),columns=['Object Name','Confidence'])
+#             if st.checkbox("Show Object's list" ):
                 
-                st.write(df)
-            if st.checkbox("Show Confidence bar chart" ):
-                st.subheader('Bar chart for confidence levels')
+#                 st.write(df)
+#             if st.checkbox("Show Confidence bar chart" ):
+#                 st.subheader('Bar chart for confidence levels')
                 
-                st.bar_chart(df["Confidence"])
+#                 st.bar_chart(df["Confidence"])
            
-        blob = cv2.dnn.blobFromImage(img2, 1 / 255, (whT, whT), [0, 0, 0], 1, crop=False)
-        net.setInput(blob)
-        layersNames = net.getLayerNames()
-        outputNames = [layersNames[i-1] for i in net.getUnconnectedOutLayers()]
-        outputs = net.forward(outputNames)
-        findObjects(outputs,img2)
+#         blob = cv2.dnn.blobFromImage(img2, 1 / 255, (whT, whT), [0, 0, 0], 1, crop=False)
+#         net.setInput(blob)
+#         layersNames = net.getLayerNames()
+#         outputNames = [layersNames[i-1] for i in net.getUnconnectedOutLayers()]
+#         outputs = net.forward(outputNames)
+#         findObjects(outputs,img2)
     
-        st.image(img2, caption='Proccesed Image.')
+#         st.image(img2, caption='Proccesed Image.')
         
-        cv2.waitKey(0)
+#         cv2.waitKey(0)
         
-        cv2.destroyAllWindows()
-        my_bar.progress(100)
+#         cv2.destroyAllWindows()
+#         my_bar.progress(100)
 
 
 
 
 def main():
+    #download_model()
     new_title = '<p style="font-size: 42px;">Welcome to my Object Detection App!</p>'
     read_me_0 = st.markdown(new_title, unsafe_allow_html=True)
 
@@ -554,3 +550,6 @@ def main():
 
 if __name__ == '__main__':
 		main()	
+
+
+
