@@ -14,7 +14,5 @@ tensorflow-io-gcs-filesystem
 keras
 keras-nightly
 Keras-Preprocessing
-opencv-contrib-python
 opencv-python-headless
-glib
 
