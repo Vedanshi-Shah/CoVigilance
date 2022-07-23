@@ -62,7 +62,7 @@ export const AppSidebarNav = ({ items }) => {
       <CNavItem>
         <CNavLink
           target="_black"
-          href="https://vedanshi-shah-covigilance-main-dev-vedanshi-3aho1z.streamlitapp.com/"
+          href="https://vedanshi-shah-covigilance-main-models-cje3cw.streamlitapp.com/"
         >
           <CIcon
             style={{ marginRight : "20px" }}
