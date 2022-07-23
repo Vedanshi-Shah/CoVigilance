@@ -259,7 +259,6 @@ def object_detection_video():
             frame_count+=1
         cap1.release()
         cap2.release()
-        cv2.destroyAllWindows()
     # CONFIDENCE = 0.5
     # SCORE_THRESHOLD = 0.5
     # IOU_THRESHOLD = 0.5
