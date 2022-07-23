@@ -2,7 +2,9 @@ import React from 'react'
 import { NavLink, useLocation } from 'react-router-dom'
 import PropTypes from 'prop-types'
 
-import { CBadge } from '@coreui/react'
+import { CBadge, CNavItem, CNavLink } from '@coreui/react'
+import CIcon from '@coreui/icons-react'
+import { cilVideo } from '@coreui/icons'
 
 export const AppSidebarNav = ({ items }) => {
   const location = useLocation()
@@ -17,7 +19,7 @@ export const AppSidebarNav = ({ items }) => {
           </CBadge>
         )}
       </>
-    )
+    );
   }
 
   const navItem = (item, index) => {
@@ -57,10 +59,25 @@ export const AppSidebarNav = ({ items }) => {
 
   return (
     <React.Fragment>
+      <CNavItem>
+        <CNavLink
+          target="_black"
+          href="https://vedanshi-shah-covigilance-main-dev-vedanshi-3aho1z.streamlitapp.com/"
+        >
+          <CIcon
+            style={{ marginRight : "20px" }}
+            icon={cilVideo}
+            size="lg"
+          />
+          Upload Video
+        </CNavLink>
+      </CNavItem>
       {items &&
-        items.map((item, index) => (item.items ? navGroup(item, index) : navItem(item, index)))}
+        items.map((item, index) =>
+          item.items ? navGroup(item, index) : navItem(item, index)
+        )}
     </React.Fragment>
-  )
+  );
 }
 
 AppSidebarNav.propTypes = {

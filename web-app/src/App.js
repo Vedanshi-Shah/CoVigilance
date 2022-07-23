@@ -1,8 +1,7 @@
-import React, { Component, lazy, Suspense } from 'react'
-import { BrowserRouter, Route, Switch } from 'react-router-dom'
-//import { AuthProvider } from './context/AuthContext'
+import React, { Component, lazy, Suspense, useState } from 'react'
+import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom'
+import { auth, isLoggedIn } from './firebase'
 import './scss/style.scss'
-// import firebase from 'firebase'
 
 const loading = (
   <div className="pt-3 text-center">
@@ -12,15 +11,32 @@ const loading = (
 
 // Containers
 const DefaultLayout = lazy(() => import('./layout/DefaultLayout'))
+const Login = React.lazy(() => import('./Login'))
+const Register = React.lazy(() => import('./Register'))
 
 class App extends Component {
+
   render() {
     return (
         <div>
           <BrowserRouter>
             <Suspense fallback={loading}>
               <Switch>
-                <Route path="/" name="Home" render={(props) => <DefaultLayout {...props} />} />
+                <Route path="/login" name="Login"
+                  render={(props) => 
+                      <Login {...props} />}
+                />
+                <Route path="/register" name="Register"
+                  render={(props) => 
+                      <Register {...props} />}
+                />
+                <Route
+                  path="/"
+                  render={(props) => isLoggedIn()
+                    ? <DefaultLayout {...props} />
+                    : <Redirect to="/login" replace />
+                  }
+                />
               </Switch>
             </Suspense>
           </BrowserRouter>

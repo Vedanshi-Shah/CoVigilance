@@ -3,13 +3,10 @@ import React, { lazy, useState, useEffect } from 'react'
 import {
   CAvatar,
   CButton,
-  CButtonGroup,
   CCard,
   CCardBody,
-  CCardFooter,
   CCardHeader,
   CCol,
-  CProgress,
   CRow,
   CTable,
   CTableBody,
@@ -27,20 +24,14 @@ import {
   cibCcPaypal,
   cibCcStripe,
   cibCcVisa,
-  cibGoogle,
-  cibFacebook,
-  cibLinkedin,
   cifBr,
   cifEs,
   cifFr,
   cifIn,
   cifPl,
   cifUs,
-  cibTwitter,
   cilCloudDownload,
   cilPeople,
-  cilUser,
-  cilUserFemale,
 } from '@coreui/icons'
 
 import avatar1 from 'src/assets/images/avatars/1.jpg'
@@ -92,7 +83,6 @@ export default function Zone1() {
       },
     ],
   })
-  //console.log(data)
   useEffect(() => {
     const db = getDatabase()
     const reference = ref(db, 'placeA/zone1/data')
@@ -115,7 +105,6 @@ export default function Zone1() {
         })
       }
       console.log(data)
-      //console.log(snapshot.val())
     })
   }, [])
   const tableExample = [
@@ -235,44 +224,6 @@ export default function Zone1() {
                       </CButton>
                     </CCol>
                   </CRow>
-                  {/* <CChartLine
-                    style={{ height: '300px', marginTop: '40px' }}
-                    data={data}
-                    options={{
-                      maintainAspectRatio: false,
-                      plugins: {
-                        legend: {
-                          display: false,
-                        },
-                      },
-                      scales: {
-                        x: {
-                          grid: {
-                            drawOnChartArea: true,
-                          },
-                        },
-                        y: {
-                          ticks: {
-                            beginAtZero: true,
-                            maxTicksLimit: 5,
-                            stepSize: Math.ceil(25 / 25),
-                            max: 250,
-                          },
-                        },
-                      },
-                      elements: {
-                        line: {
-                          tension: 0.4,
-                        },
-                        point: {
-                          radius: 0,
-                          hitRadius: 10,
-                          hoverRadius: 4,
-                          hoverBorderWidth: 3,
-                        },
-                      },
-                    }}
-                  /> */}
                   <Line data={data} options={options} />
                 </CCardBody>
               </CCard>
@@ -304,20 +255,6 @@ export default function Zone1() {
                               </div>
                             </CCol>
                           </CRow>
-
-                          {/* <hr className="mt-0" />
-                          {progressGroupExample2.map((item, index) => (
-                            <div className="progress-group mb-4" key={index}>
-                              <div className="progress-group-header">
-                                <CIcon className="me-2" icon={item.icon} size="lg" />
-                                <span>{item.title}</span>
-                                <span className="ms-auto fw-semibold">{item.value}%</span>
-                              </div>
-                              <div className="progress-group-bars">
-                                <CProgress thin color="warning" value={item.value} />
-                              </div>
-                            </div>
-                          ))} */}
                         </CCol>
                       </CRow>
 

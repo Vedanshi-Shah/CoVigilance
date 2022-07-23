@@ -102,7 +102,6 @@ export default function WidgetsDropdown() {
           },
         ],
       })
-      //console.log(lk.length);
     })
     onValue(reference2, (snapshot) => {
       var lk = Object.keys(snapshot.val()).reverse()[0]
@@ -122,7 +121,6 @@ export default function WidgetsDropdown() {
           },
         ],
       })
-      //console.log(lk.length);
     })
     onValue(reference2, (snapshot) => {
       var lk = Object.keys(snapshot.val()).reverse()[0]
@@ -142,7 +140,6 @@ export default function WidgetsDropdown() {
           },
         ],
       })
-      //console.log(lk.length);
     })
     onValue(reference2, (snapshot) => {
       var lk = Object.keys(snapshot.val()).reverse()[0]
@@ -162,7 +159,6 @@ export default function WidgetsDropdown() {
           },
         ],
       })
-      //console.log(lk.length);
     })
   }, [])
 
