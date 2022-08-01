@@ -15,7 +15,7 @@
    
   </p>
 </p>
-<hr />
+
 ## Project made by
 
 ### Commands to build the docker image
