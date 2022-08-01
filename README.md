@@ -17,12 +17,11 @@
 </p>
 <hr />
 ## Project made by
-<br />
+
 ### Commands to build the docker image
 
 ### Commands to start the FastAPI
 
-<br />
 ## Project made by
 1. [Om Khare](https://github.com/OmKhare)
 2. [Harshmohan Kulkarni](https://github.com/harshmohan07)
