@@ -59,19 +59,6 @@ export const AppSidebarNav = ({ items }) => {
 
   return (
     <React.Fragment>
-      <CNavItem>
-        <CNavLink
-          target="_black"
-          href="https://vedanshi-shah-covigilance-main-models-x7b5ly.streamlitapp.com/"
-        >
-          <CIcon
-            style={{ marginRight : "20px" }}
-            icon={cilVideo}
-            size="lg"
-          />
-          Upload Video
-        </CNavLink>
-      </CNavItem>
       {items &&
         items.map((item, index) =>
           item.items ? navGroup(item, index) : navItem(item, index)

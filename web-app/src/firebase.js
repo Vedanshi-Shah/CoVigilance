@@ -3,6 +3,7 @@ import { initializeApp } from 'firebase/app'
 // ​​import { getFirestore, query, getDocs, collection, where, addDoc, ​} from "firebase/firestore";
 import { GoogleAuthProvider, getAuth, signInWithPopup, signInWithEmailAndPassword, createUserWithEmailAndPassword, sendPasswordResetEmail, signOut, onAuthStateChanged } from 'firebase/auth'
 import { getFirestore, query, getDocs, collection, where, addDoc } from 'firebase/firestore'
+import {getStorage} from "firebase/storage";
 import { useEffect, useState } from 'react'
 import { Redirect, useHistory } from 'react-router-dom'
 
@@ -21,6 +22,7 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig)
 const auth = getAuth(app)
 const db = getFirestore(app);
+const storage=getStorage(app);
 
 const logInWithEmailAndPassword = async (email, password) => {
   try {
@@ -65,6 +67,7 @@ function login(email, password) {
 export {
   auth,
   db,
+  storage,
   logInWithEmailAndPassword,
   registerWithEmailAndPassword,
   login,
