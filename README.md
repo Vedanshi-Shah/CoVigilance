@@ -26,6 +26,10 @@ docker build -t {image_name} .
 
 ### Commands to start the FastAPI
 
+```
+uvicorn entry:app --reload
+```
+
 ## Project made by
 1. [Om Khare](https://github.com/OmKhare)
 2. [Harshmohan Kulkarni](https://github.com/harshmohan07)
