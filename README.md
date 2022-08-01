@@ -16,7 +16,7 @@
   </p>
 </p>
 <hr />
-## Integration with Docker & FastAPI
+## Project made by
 <br />
 ### Commands to build the docker image
 
