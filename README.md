@@ -18,11 +18,11 @@
 <hr />
 ## Integration with Docker & FastAPI
 ### Commands to build the docker image
-```shell
+```
 docker build -t {image_name} .
 ```
 ### Commands to start the FastAPI
-```shell
+```
 uvicorn entry:app --reload
 ```
 ## Project made by
