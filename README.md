@@ -20,6 +20,10 @@
 
 ### Commands to build the docker image
 
+```
+docker build -t {image_name} .
+```
+
 ### Commands to start the FastAPI
 
 ## Project made by
