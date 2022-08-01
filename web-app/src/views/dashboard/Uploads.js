@@ -52,7 +52,10 @@ import {
   Legend,
 } from 'chart.js'
 import { Line } from 'react-chartjs-2'
+import {storage, db} from "../../firebase";
+import { ref as sRef,  uploadBytesResumable, getDownloadURL} from 'firebase/storage';
 import { AppSidebar, AppHeader } from "src/components/index";
+import { collection, addDoc } from "firebase/firestore"; 
 const WidgetsDropdown = lazy(() => import('../widgets/WidgetsDropdown.js'))
 const WidgetsBrand = lazy(() => import('../widgets/WidgetsBrand.js'))
 export default function Upload() {
@@ -73,7 +76,7 @@ export default function Upload() {
       }
       console.log("I'm clicked");
       setBlobs([])
-      const storageRef=ref(storage,`/files/${file.name}`);
+      const storageRef=sRef(storage,`/files/${file.name}`);
       const uploadTask=uploadBytesResumable(storageRef,file);
       uploadTask.on(
         "state_changed",
@@ -87,14 +90,12 @@ export default function Upload() {
         ()=>{
           getDownloadURL(uploadTask.snapshot.ref).then((url)=>{
             setFileLink(url);
-            const docRef = async () => {await addDoc(collection(db, "users"), {
+            const docRef = async () => {await addDoc(collection(db, "videos"), {
               file_name: file.name,
               file_url: url
             })};
             docRef();
             url = encodeURI(url);
-            fetchBlobs();
-            fetchData();
             setPercent(0);
           });
         }
