@@ -16,7 +16,7 @@
   </p>
 </p>
 
-## Project made by
+## Commands to build Docker Image and initialize FastAPI
 
 ### Commands to build the docker image
 
